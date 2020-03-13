@@ -31,3 +31,9 @@ BookingBot - 口罩预约机器人
 ## 更新日志
 
 [更新日志](CHANGELOG.md)
+
+## 许可
+[LICENSE](LICENSE)
+
+## 作者
+[BuTn](https://github.com/kimmosc2)
