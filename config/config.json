@@ -1,9 +1,24 @@
 {
-  "account": "0",
-  "password": "0",
-  "placePointId": "0",
-  "sleep": 300,
-  "max": 1000,
-  "companyId": "",
-  "num": 5
+  "users": [
+    {
+      "account": "手机号",
+      "password": "密码",
+      "placePointId": "药店id",
+      "sleep": 300,
+      "max": 5000,
+      "companyId": "企业(地点、种类)id",
+      "num": 5,
+      "grade": 2
+    },
+    {
+      "account": "手机号",
+      "password": "密码",
+      "placePointId": "药店id",
+      "sleep": 300,
+      "max": 5000,
+      "companyId": "企业(地点、种类)id",
+      "num": 5,
+      "grade": 2
+    }
+  ]
 }

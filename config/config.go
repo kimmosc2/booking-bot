@@ -1,7 +1,16 @@
 package config
 
+import (
+	"booking-bot/datasource"
+	"booking-bot/flags"
+	"encoding/json"
+	"io/ioutil"
+	"log"
+	"os"
+)
+
 // 配置文件
-type Config struct {
+type UserConf struct {
 	// 手机号
 	Account string `json:"account"`
 	// 密码
@@ -16,5 +25,21 @@ type Config struct {
 	Num int `json:"num"`
 	// 地区id
 	CompanyId string `json:"companyId"`
+	// Goroutine数量
+	Grade int `json:"grade"`
+
 }
 
+// 加载配置文件
+func LoadConfig(users *datasource.Configuration) {
+	open, err := os.Open(flags.ConfigPath)
+	if err != nil {
+		log.Fatal("open file error:", err.Error())
+	}
+	b, _ := ioutil.ReadAll(open)
+	err = json.Unmarshal(b, users)
+	if err != nil {
+		log.Fatal("parse config error:", err.Error())
+	}
+
+}
